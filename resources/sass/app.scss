@@ -1,0 +1,14 @@
+//
+@import "variables/sizes";
+@import "variables/colors";
+@import "menu";
+@import "group";
+@import "slider";
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix{
+  padding-top: 10px;
+}

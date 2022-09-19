@@ -1,0 +1,70 @@
+.groups {
+  margin-top: 15px;
+  .col-md-4 a:hover{
+    text-decoration: none !important;
+  }
+  .group {
+    height: 110px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 15px;
+
+    .layer {
+      height: 100%;
+      width: 100%;
+      .name{
+        font-size: xxx-large;
+        color: black;
+        margin-left: 20px;
+        display: block;
+      }
+      .age{
+        font-size: x-large; 
+        color: black;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .group-bevers {
+    .layer {
+      background-color: $background-bevers;
+    }
+  }
+
+  .group-welpen {
+    .layer {
+      background-color: $background-welpen;
+    }
+  }
+
+  .group-scouts {
+    .layer {
+      background-color: $background-scouts;
+    }
+  }
+
+  .group-explores {
+    .layer {
+      background-color: $background-explores;
+    }
+  }
+
+  .group-pivos {
+    .layer {
+      background-color: $background-pivos;
+    }
+  }
+
+  .group-plus {
+    .layer {
+      background-color: $background-plus;
+    }
+  }
+}
+.groups-items{
+  .col-md-4{
+    min-width: 100%;
+  }
+}
