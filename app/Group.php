@@ -4,6 +4,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\SubGroup;
 use Illuminate\Support\Str;
+use App\Actie;
 
 class Group extends Model
 {
@@ -25,6 +26,11 @@ class Group extends Model
 
     public function slider(){
         return Slider::where('slider_name', Str::lower($this->name))->orderBy('order_list');
+    }
+
+    public function acties(){
+        $acties = SubGroup::with('acties')->select('acties.*')->where('subgroup.id', $this->id);
+        return $acties;
     }
 
 }

@@ -6,7 +6,7 @@
 @endsection
 
 @section('context')
-    Het volgende lid is aangemeld op: {{ $registration->sub_date->format('d-m-Y H:m:s') }}<br />
+    Het volgende lid is aangemeld op: {{ $registration->sub_date->format('d-m-Y') }} {{$registration->sub_date->toTimeString()}}<br />
     <b>Naam:</b> {{ $registration->name }}<br />
     <b>Geboorte datum:</b> {{ $registration->geb_date->format('d-m-Y') }}<br />
     <b>Geslacht:</b> {{ $registration->gender }}<br />

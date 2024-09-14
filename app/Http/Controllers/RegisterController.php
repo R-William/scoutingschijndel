@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use View;
 use App\SubGroup;
 use App\Group;
+use App\Jobs\MailRegistration;
 use App\Registration;
 
 class RegisterController extends Controller
@@ -41,10 +42,13 @@ class RegisterController extends Controller
         if($validator->fails()){
             return $validator;
         }
+        $registration->save();;
 
         $this->layout->registration = $registration;
         $this->layout->sliders = $registration->sub_group->group->slider()->get();
-        $registration->send();
+        $job = (new MailRegistration($registration));
+
+        $this->dispatch($job);
         return $this->layout;
     }
 }

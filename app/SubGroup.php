@@ -21,6 +21,11 @@ class SubGroup extends Model
     {
         return $this->belongsTo(Group::class, 'group_id', 'id');
     }
+    
+    public function acties()
+    {
+        return $this->belongsTo(Actie::class, 'group_id', 'id');
+    }
         
     function getGenderTextAttribute(){
         if($this->gender == 1){

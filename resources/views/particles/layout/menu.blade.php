@@ -16,7 +16,7 @@
             <li data-arrow="↓ "><a href="#">Verhuur</a>
                 <ul>
                     <li><a href="{{ route('verhuur.building') }}">Over ons gebouw</a></li>
-                    <li><a href="{{ route('verhuur.surrounding') }}">Over onze omgeving</a></li>
+                    <!-- <li><a href="{{ route('verhuur.surrounding') }}">Over onze omgeving</a></li> -->
                     <li><a href="{{ route('verhuur.calender') }}">Beschikbaarheid & boeken</a></li>
                     <li><a href="{{ route('verhuur.prices') }}">Tarieven en voorwaarden</a></li>
                 </ul>
@@ -26,8 +26,8 @@
                     <li><a href="{{ route('about_us.general') }}">Algemeen</a></li>
                     <li><a href="{{ route('about_us.contact') }}">Contact</a></li>
                     <li><a href="{{ route('about_us.register_costs') }}">Lid worden & kosten</a></li>
-                    <li><a href="{{ route('news') }}">Nieuws</a></li>
-                    <li><a href="{{ route('actie') }}">Actie</a></li>
+                    <!-- <li><a href="{{ route('news') }}">Nieuws</a></li> -->
+                    <li><a href="{{ route('actie') }}">Acties</a></li>
                 </ul>
             </li>
             <li><a href="{{ route('first_time') }}" class="btn btn-warning">Kom kijken</a></li>

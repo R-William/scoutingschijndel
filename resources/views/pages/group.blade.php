@@ -4,7 +4,10 @@
     <div class="row">
         <div class="col-md-9">
             <h1>{{ $group->name }}</h1>
-            <p>{{ $group->description }}</p>
+            <p>{{ $group->description }}</p> 
+            @if (isset($acties))
+                @include('particles.acties')
+            @endif
             @include('particles.slider-bigg')
         </div>
         <div class="col-md-3">

@@ -28,9 +28,4 @@ class Reservation extends Model
         'end_date' => 'required',
         'amount' => 'required'
     ];
-
-    public function send(){
-        \Mail::to('verhuur@scoutingschijndel.nl')->send(new ReservationRent($this));
-        \Mail::to($this->email)->send(new ReservationUser($this));
-    }
 }

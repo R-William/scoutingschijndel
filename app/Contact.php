@@ -19,9 +19,4 @@ class Contact extends Model
         'name' => 'required',
         'email' => 'required|email',
     ];
-
-    public function send(){
-        \Mail::to('verhuur@scoutingschijndel.nl')->send(new ContactRent($this));
-        \Mail::to($this->email)->send(new ContactUser($this));
-    }
 }

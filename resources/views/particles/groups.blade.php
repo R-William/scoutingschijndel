@@ -53,7 +53,7 @@
         <a href="{{ route('group', ['group' => 'plusscouts']) }}">
             <div class="card group group-plus" style="background-image: url('{{asset('')}}images/pages/home/groups/plusscouts.JPG')">
                 <div class="layer">
-                    <span class="name">PlusScouts</span>
+                    <span class="name">Extras</span>
                     <span class="age">Vanaf 25 Jaar</span>
                 </div>
             </div>

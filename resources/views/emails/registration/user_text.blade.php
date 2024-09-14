@@ -1,6 +1,6 @@
 Beste,
     
-Bedankt voor uw getoonde interesse in de {{ $registration->sub_group->name }} van Scouting Schhijndel. 
+Bedankt voor uw getoonde interesse in de {{ $registration->sub_group->name }} van Scouting Schijndel. 
 
 Uw gegevens zijn gedeeld met de {{ $registration->sub_group->name }}. Zij zullen binnekort contact op nemen over de vervolg stappen. Zij draaien normaal gesproken op {{ $registration->sub_group->date }} van {{ $registration->sub_group->start_time }} - {{ $registration->sub_group->end_time }}. 
 

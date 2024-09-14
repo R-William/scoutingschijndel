@@ -33,4 +33,5 @@
             @include('particles.rent.calender')
         </div>
     </div>
+</div>
 @endsection

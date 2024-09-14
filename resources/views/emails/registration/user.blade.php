@@ -2,7 +2,7 @@
 @section('intro')
     Beste,<br />
     <br />
-    Bedankt voor uw getoonde interesse in de {{ $registration->sub_group->name }} van Scouting Schhijndel. 
+    Bedankt voor uw getoonde interesse in de {{ $registration->sub_group->name }} van Scouting Schijndel. 
 @endsection
 
 @section('context')

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
 use App\Reservation;
 use App\Contact;
+use App\Jobs\MailRentContact;
+use App\Jobs\MailRentReservation;
 use Illuminate\Http\Request;
 use App\Slider;
 use View;
@@ -14,30 +16,6 @@ class RentController extends Controller
     function building(){
         $this->layout = View::make('pages/rent/building');
         $this->layout->title = "Scouting Schijndel - Gebouw";
-        
-        #TODO
-        $sliders = [];
-        $slider = new Slider();
-        $slider->image_location = 'http://www.scoutingschijndel.nl/content/illustrations/verkenners.jpg';
-        $slider->slider_name = 'Lokaal 2';
-        $slider->order_list = 0;
-
-        $slider1 = new Slider();
-        $slider1->image_location = 'http://www.scoutingschijndel.nl/content/illustrations/buiten.jpg';
-        $slider1->slider_name = 'Buiten';
-        $slider1->order_list = 1;
-        
-        $slider2 = new Slider();
-        $slider2->image_location = 'http://www.scoutingschijndel.nl/content/illustrations/verkenners.jpg';
-        $slider2->slider_name = 'Lokaal 2';
-        $slider2->order_list = 2;
-        
-        $slider3 = new Slider();
-        $slider3->image_location = 'http://www.scoutingschijndel.nl/content/illustrations/verkenners.jpg';
-        $slider3->slider_name = 'Buiten';
-        $slider3->order_list = 3;
-        array_push($sliders, $slider, $slider1, $slider2, $slider3);
-        $this->layout->sliders = $sliders;
 
         return $this->layout;
     }
@@ -69,13 +47,15 @@ class RentController extends Controller
             $contact = new Contact($request->all());
             $validator = Validator::make($request->all(), $contact->rules);
 
-            
             if($validator->fails()){
                 return $validator;
             }
             
             $this->layout->contact = $contact;
-            $contact->send();
+            $contact->save();
+
+            $job = (new MailRentContact($contact));
+            $this->dispatch($job);
         }
         if(isset($request->book_form)){
             $reservation = new Reservation($request->all());
@@ -86,7 +66,10 @@ class RentController extends Controller
             }
 
             $this->layout->reservation = $reservation;
-            $reservation->send();
+            $reservation->save();
+            
+            $job = (new MailRentReservation($contact));
+            $this->dispatch($job);
         }
         
         $this->layout->request = $request;

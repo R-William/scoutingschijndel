@@ -47,7 +47,7 @@
             <a href="/content/illustrations/ssflyer2015.jpg" class="fancybox-single"><img src="/content/illustrations/ssflyer2015.jpg" class="inline illustration" alt=""></a>
             <h1>Vrijwilliger of leiding worden?</h1>
             <p>
-            Naast leden heeft Scouting Schijndel natuurlijk ook vrijwilligers nodig om de groep draaiende te houden. Voor bestuur, voor taken en als leiding voor de jeugdgroepen. <br><br>
+            Vind jij het leuk om elke week uitdagende programma's te maken voor jeugdleden wordt dan staflid bij een van de groepen. Wil je meer iets achter de schermen doen, dat kan ook. Neem gerust contact op via scretariaat@scoutingschijndel.nl
             </p>
             <p>
             Zijn er nog zaken onduidelijk of heeft u nog vragen of opmerkingen dan mag u contact opnemen met <a href="mailto:info@scoutingschijndel.nl">info@scoutingschijndel.nl</a>

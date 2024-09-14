@@ -47,9 +47,4 @@ class Registration extends Model
         return $this->hasOne(SubGroup::class, 'id', 'group');
     }
 
-    public function send(){
-        \Mail::to($this->sub_group()->first()->email)->send(new RegistrationGroup($this));
-        \Mail::to($this->email)->send(new RegistrationUser($this));
-    }
-
 }
